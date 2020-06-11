@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="/img/dp.png" type="image/x-icon" />
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-113303558-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-113303558-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    
+    <title>
+      
+      [2018-19]Speech Recognition Error Identification - JoyyyJen
+      
+    </title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Caveat|Lato:100,100i,300,300i,400,400i,700,700i|Source+Code+Pro:300,400,500,700" rel="stylesheet">
+    
+
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/bigfoot/dist/bigfoot.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/bigfoot/dist/bigfoot-number.css" />
+    <script type="text/javascript">
+        $.bigfoot();
+    </script>
+    
+    
+</head>
+
+    <body class="page-template">
+        <header class="main-header">
+	<div class="main-header-content">
+		<h1 class="blog-title">
+			<a href="/">
+				
+           JoyyyJen
+				
+			</a>
+		</h1>
+		<h2 class="blog-description">四處瞧瞧，寫寫看看，就醉了</h2>
+	</div>
+
+	<div class="nav">
+    
+		
+      <a class="nav- " role="presentation" href="/">Portfolio</a>
+		
+      <a class="nav- " role="presentation" href="/project/">Projects</a>
+		
+      <a class="nav- " role="presentation" href="/work/">Works</a>
+		
+		<a class="nav- " role="presentation" href="https://ajoy.me/">Blog</a>
+	</div>
+</header>
+
+        
+<main class="content" role="main">
+  <article class="post page">
+    <header class="post-header">
+      <h2 class="post-title">[2018-19]Speech Recognition Error Identification</h2>
+    </header>
+    <section class="post-content">
+      <p><strong>Project Title</strong> : Speech-To-Text Error Analyzer<br />
+<strong>Skill</strong>: Python, Flask<br />
+<strong>Toolkit</strong>: CMUSphinx, nltk, numpy<br />
+<strong>Summary</strong> :</p>
+
+<ul>
+<li>Built a Flask front end to corporate with recognition application for speech recognition and text analyzation by getting recognition files from user and posting classification result<br /></li>
+<li>Combined the ASR application with n-gram and word error rate to do speech-driven text error classification with a goal to detect and improve common mistake<br />
+<br /></li>
+</ul>
+
+<hr />
+
+<h3 id="purpose">Purpose</h3>
+
+<p>Speech to Text, or Automatic Speech Recognition, is a process to convert human speech to a corresponding set of words. Currently, there are some well-established speech recognition systems such as Microsoft, Wake-Up-Word, Google, and CMU Sphinx.<br />
+Yet, there aren’t many evaluation tools to analyse and categorize different word errors.</p>
+
+<p>Taken the following word error rate as an example (from my current intern research):</p>
+
+<blockquote>
+<p>REF (reference) :  who had__vanished<br />
+HYP (hypothesis) :    ___ would vanish<br />
+EVA (evaluation) :    D   _S___S<br />
+WER(word error rate): 17.65%</p>
+</blockquote>
+
+<p>In this case, &quot;who&quot; has been deleted from the reference sentences and &quot;has&quot; is substituted by &quot;would&quot;, and &quot;vanished&quot; is substituted by &quot;vanish&quot;. (D for delete, S for substitute)</p>
+
+<h3 id="speech-to-text-error-analyzer">Speech-to-Text Error Analyzer</h3>
+
+<ul>
+<li>The <strong>goal/function of this tool</strong>: is to list types of errors. For instance,<br />
+&gt; D S combination cover __ % of error from this recognizer performance.<br />
+&gt; __ % D S combination is due to two words mixing together<br />
+&gt; S is __ % of all the error<br />
+&gt; __ % is due to inflections, __  % is a spelling mistake, and __ % is determiner substitute.<br />
+<br /></li>
+</ul>
+
+<h3 id="error-analyzer-components">Error Analyzer Components</h3>
+
+<p><strong>Front End</strong>: Python Flask WebUI<br />
+- User Interface<br />
+- Easier to use<br />
+- Data visualization</p>
+
+<p><strong>Back End</strong>: Python<br />
+- Speech Recognition<br />
+- Error Analyzing</p>
+
+<h3 id="requirements">Requirements</h3>
+
+<ul>
+<li>Python 3<br />
+<br /></li>
+</ul>
+
+<p><strong>Packages Install</strong><br />
+- flask<br />
+- pyyaml<br />
+- nltk<br />
+- numpy<br />
+- SpeechRecognition<br />
+- metaphone</p>
+
+<h3 id="demo">Demo</h3>
+
+<p><img src="/gui.png" alt="img4" /></p>
+
+<p><img src="/visual.png" alt="img1" /></p>
+
+<p><img src="/subclasses-error.png" alt="img2" /></p>
+
+<p>github project link: <a href="https://github.com/joyyyjen/sr-GUI">sr-GUI</a></p>
+
+<h3 id="common-errors">Common Errors</h3>
+
+<ol>
+<li><p><strong>Inflection, Homophone</strong><br />
+Inflection might be caused by the missing suffixes in the phonetics dictionary.<br />
+And homophone can be either the speaker's error or recognition error.</p></li>
+
+<li><p><strong>Split or merge</strong></p></li>
+
+<li><p>hyphens: sometimes when we recognize the word correctly, it was marked as incorrect because of a missing or extra hyphens.</p></li>
+
+<li><p>numbers to words: the ASR can recognize the number but only output number in words format. It can cause the wrong alignment during the evaluation and lower the word error rate.</p></li>
+</ol>
+
+<p>Link to more detail findings: <a href="https://joyyyjen.github.io/notebook-web/posts/error-repetition-hyphen/">Error,Repetition,Hyphen</a></p>
+
+<h3 id="sr-tf-idf-independent-study-proposal">SR/TF-IDF Independent Study Proposal</h3>
+
+<p>I am working on a further improvement from the SR-ANLZ project.<br />
+The goal is to combine text information with word error rate with TF-IDF approaches. Since errors on common words like &quot;the&quot; might not be as bad as errors on rare/important words, we can adjust our evaluation parameters.<br />
+Another factor is length normalizer. If two recognition text has the same amount of error word, the one which has a longer passage length should still have a higher performance score.</p>
+
+<h3 id="mentor-point-of-view">Mentor Point of View</h3>
+
+<ul>
+<li>adapt the best result from the different speech recognition<br /></li>
+<li>adapt the word correction?<br /></li>
+<li>grammar autocorrect?<br />
+<br /></li>
+</ul>
+
+<h3 id="question">Question?</h3>
+
+<ul>
+<li>Will it be useful?<br />
+I think it can be useful because it highlights the kind of mistake in details. It's like human learn from mistakes.<br />
+<br /></li>
+</ul>
+
+<h3 id="possible-output">Possible Output</h3>
+
+<ul>
+<li>Adapt the formula, f(q,d) = &sum;w&in;q&and;d c(w,q)x (k+1)c(w,d)/(c(w,d)+k(1-b+b x|d|/avdl)) x log ((M+1)/df(w))<br /></li>
+<li>Query is the error words<br /></li>
+<li>Output the following:<br />
+<br /></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>term</th>
+<th>df</th>
+<th>idf</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>car</td>
+<td>18165</td>
+<td>1.65</td>
+</tr>
+
+<tr>
+<td>auto</td>
+<td>6725</td>
+<td>2.08</td>
+</tr>
+
+<tr>
+<td>..</td>
+<td>..</td>
+<td>..</td>
+</tr>
+</tbody>
+</table>
+    </section>
+  </article>
+</main>
+
+        <footer class="site-footer">
+  <section class="icon"> <a class="icon2-github" href="https://github.com/joyyyjen"></a> <a class="icon2-linkedin" href="https://www.linkedin.com/in/joyjen/"></a></section>
+  <section class="copyright">&copy; 2019 JoyyyJen</section>
+  <section class="poweredby"><a href="http://thedarkroast.com/arabica">Arabica</a> theme by Sean Lunsford. Published with <a href="https://gohugo.io">Hugo</a>.</section>
+</footer>
+
+
+
+    </body>
+</html>

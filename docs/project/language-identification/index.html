@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="/img/dp.png" type="image/x-icon" />
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-113303558-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-113303558-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    
+    <title>
+      
+      [2018]Text Classification: Language Identification - JoyyyJen
+      
+    </title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Caveat|Lato:100,100i,300,300i,400,400i,700,700i|Source+Code+Pro:300,400,500,700" rel="stylesheet">
+    
+
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/bigfoot/dist/bigfoot.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/bigfoot/dist/bigfoot-number.css" />
+    <script type="text/javascript">
+        $.bigfoot();
+    </script>
+    
+    
+</head>
+
+    <body class="page-template">
+        <header class="main-header">
+	<div class="main-header-content">
+		<h1 class="blog-title">
+			<a href="/">
+				
+           JoyyyJen
+				
+			</a>
+		</h1>
+		<h2 class="blog-description">四處瞧瞧，寫寫看看，就醉了</h2>
+	</div>
+
+	<div class="nav">
+    
+		
+      <a class="nav- " role="presentation" href="/">Portfolio</a>
+		
+      <a class="nav- " role="presentation" href="/project/">Projects</a>
+		
+      <a class="nav- " role="presentation" href="/work/">Works</a>
+		
+		<a class="nav- " role="presentation" href="https://ajoy.me/">Blog</a>
+	</div>
+</header>
+
+        
+<main class="content" role="main">
+  <article class="post page">
+    <header class="post-header">
+      <h2 class="post-title">[2018]Text Classification: Language Identification</h2>
+    </header>
+    <section class="post-content">
+      <p><strong>Project Title</strong> : Language Identification on English, French, and Spanish<br />
+<strong>Skill</strong>:  python<br />
+<strong>Toolkit</strong>: nltk<br />
+<strong>Summary</strong> :</p>
+
+<p>• Implemented statistical letter and word-based n-gram models with smoothing for English, Italian, and Spanish<br />
+• Achieved above 95% for both letter and word-based language models for test sets between 300 to 2000 sentences</p>
+
+<h3 id="language-model">Language Model</h3>
+
+<ul>
+<li>A statistical model<br /></li>
+<li>a probability distribution over sequences of words<br /></li>
+<li>Given a string with a length of m, it assigns a probability to the whole sequence<br />
+<br /></li>
+</ul>
+
+<p>My note on <a href="/content/language-model.md">language model</a></p>
+
+<p>Estimating the relative likelihood of different phrases is useful in many natural language processing applications, especially those that generate text as an output.<br />
+We can find language model in <strong>speech recognition</strong>, <strong>machine translation</strong>, <strong>part-of-speech tagging</strong>, <strong>parsing</strong>, <strong>handwriting recognition</strong>, <strong>information retrieval</strong> and other applications.</p>
+
+<p>The program can be used when we want to <strong>detect current keyboard language in multi-language computer</strong>.<br />
+For instance,<br />
+&gt; &quot;Il sait pertinemment que notre Reine est un chef d ' État apolitique . &quot; is <strong>French</strong><br />
+&gt; &quot;Il processo verbale della seduta di ieri è stato distribuito .&quot; is <strong>Spanish</strong></p>
+
+<h3 id="models">Models</h3>
+
+<ol>
+<li>Letter Bigram: find the probability distribution over sequences of characters.<br />
+-- Language Model &rarr; P(n|a), P(g|n)<br /></li>
+<li>Word Bigram: find the probability distribution over sequences of words.<br />
+-- Language Model &rarr; P(model|Language)<br />
+<br /></li>
+</ol>
+
+<h3 id="advantage-of-the-letter-model">Advantage of the Letter Model:</h3>
+
+<ul>
+<li>the size of the bigram matrixes are much smaller compare to those word model.<br />
+-- For a single language, the matrix is around 100*100.<br /></li>
+<li>The bigram matrixes are not as sparse as those in the word model<br />
+<br /></li>
+</ul>
+
+<h3 id="disadvantages-of-the-letter-model">Disadvantages of the Letter Model:</h3>
+
+<ul>
+<li>might not work for short strings, because the possible combination of Latin alphabet is limited and our training language is similar.<br />
+<br /></li>
+</ul>
+
+<h3 id="advantage-of-the-word-model">Advantage of the Word Model</h3>
+
+<ul>
+<li>After smoothing and considering out-of-vocabulary words, the performance of #2 is better than the performance of #1<br /></li>
+<li>It can deal with short strings<br />
+<br /></li>
+</ul>
+
+<h3 id="disadvantages-for-the-word-model">Disadvantages for the Word Model:</h3>
+
+<ul>
+<li>The size of bigram matrixes are much bigger than those in letter model<br />
+-- The types of words are much more than types of character<br />
+-- From all three languages, the matrix is at least 7000*7000.<br /></li>
+<li>It requires smoothing since the bigram is very sparse, otherwise, the performance will be lower than 80%. Moreover, there are out-of-vocabulary words.<br />
+<br /></li>
+</ul>
+
+<h3 id="outcome">Outcome</h3>
+
+<ul>
+<li><p>Comparing the *<em>letter model</em>'s output to the solution file, the output answer matches 99.6% of the solution file.<br />
+-- The letter model can be implemented without any kind of smoothing and still have above 85% correctness.<br />
+-- However, it will cause some sentence to be <strong>unidentifiable</strong>, because there are some sentences' possibility is zero for all three languages.<br />
+-- Some letter sequences are not in bigram because it’s <strong>proper noun</strong>.<br />
+-- Better to implement the basic <strong>add-one smoothing</strong>.</p></li>
+
+<li><p>Comparing the <strong>word model</strong>'s output with the solution file, the output answer matches 100% of the solution file<br />
+-- also required OOV and smoothing</p></li>
+</ul>
+    </section>
+  </article>
+</main>
+
+        <footer class="site-footer">
+  <section class="icon"> <a class="icon2-github" href="https://github.com/joyyyjen"></a> <a class="icon2-linkedin" href="https://www.linkedin.com/in/joyjen/"></a></section>
+  <section class="copyright">&copy; 2019 JoyyyJen</section>
+  <section class="poweredby"><a href="http://thedarkroast.com/arabica">Arabica</a> theme by Sean Lunsford. Published with <a href="https://gohugo.io">Hugo</a>.</section>
+</footer>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Works on JoyyyJen</title>
+    <link>/work/</link>
+    <description>Recent content in Works on JoyyyJen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Mar 2019 21:09:03 -0600</lastBuildDate>
+    
+	<atom:link href="/work/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[2018-19]Spin Intern: Speech-to-Text Auto-Captioning</title>
+      <link>/work/spin-intern/</link>
+      <pubDate>Fri, 01 Mar 2019 21:09:03 -0600</pubDate>
+      
+      <guid>/work/spin-intern/</guid>
+      <description>&lt;h3 id=&#34;job-description&#34;&gt;Job Description&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Employer&lt;/strong&gt; : National Center For Supercomputing Application&lt;br /&gt;
+&lt;strong&gt;Project Title&lt;/strong&gt; : Speech-To-Text Auto Captioning&lt;br /&gt;
+&lt;strong&gt;Skill&lt;/strong&gt;: python, bash, C++ &lt;br&gt;&lt;br /&gt;
+&lt;strong&gt;Toolkit&lt;/strong&gt;: CMUSphinx&lt;br /&gt;
+&lt;strong&gt;Summary&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Researching frameworks and workflow for Automatic Speech Recognition (ASR) in order to facilitate live auto-captioning and create caption files&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Developing an ASR application based on CMUSphinx Open Source Speech Recognition system&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Building domain-specific speech and text corpus for phonetics dictionary and acoustics model&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Comparing and evaluating the models&#39; difference to get better training result&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>[2017]Glossika</title>
+      <link>/work/glossika/</link>
+      <pubDate>Thu, 10 Aug 2017 21:09:12 -0600</pubDate>
+      
+      <guid>/work/glossika/</guid>
+      <description>&lt;h3 id=&#34;job-description&#34;&gt;Job Description&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Employer&lt;/strong&gt; : Glossika&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A company that provides language acquisition strategies for beginner and advanced language&lt;br /&gt;
+learner, and offers an AI-based platform to speed fluency.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Project Title&lt;/strong&gt; : Role and Reference Grammar Annotation&lt;br /&gt;
+&lt;strong&gt;Skill&lt;/strong&gt;: Knowledgeable in semantics, syntax, Regex&lt;br /&gt;
+&lt;strong&gt;Toolkit&lt;/strong&gt;: Excel, Google Spread Sheet&lt;br /&gt;
+&lt;strong&gt;Summary&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Tagged syntactic and semantic features based on role and reference grammar&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Cooperated with a software developer to build a syntactically tagged corpus aiming at AI training and testing on language learning at different levels&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As my first linguist&#39;s relevant job, it indeed gave me a new perspective. After this internship experience and my introductory and upper-level coursework, I found an interest in natural language processing.&lt;br /&gt;
+The task is mostly about thematic/semantic role labeling. And its theoretical framework is based on Role and Reference Grammar.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on JoyyyJen</title>
+    <link>/project/</link>
+    <description>Recent content in Projects on JoyyyJen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Mar 2019 21:09:57 -0600</lastBuildDate>
+    
+	<atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[2018-19]Speech Recognition Error Identification</title>
+      <link>/project/asr-error-identification/</link>
+      <pubDate>Fri, 01 Mar 2019 21:09:57 -0600</pubDate>
+      
+      <guid>/project/asr-error-identification/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Project Title&lt;/strong&gt; : Speech-To-Text Error Analyzer&lt;br /&gt;
+&lt;strong&gt;Skill&lt;/strong&gt;: Python, Flask&lt;br /&gt;
+&lt;strong&gt;Toolkit&lt;/strong&gt;: CMUSphinx, nltk, numpy&lt;br /&gt;
+&lt;strong&gt;Summary&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Built a Flask front end to corporate with recognition application for speech recognition and text analyzation by getting recognition files from user and posting classification result&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Combined the ASR application with n-gram and word error rate to do speech-driven text error classification with a goal to detect and improve common mistake&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>[2019]Chatbot</title>
+      <link>/project/chatbot/</link>
+      <pubDate>Fri, 01 Mar 2019 21:09:30 -0600</pubDate>
+      
+      <guid>/project/chatbot/</guid>
+      <description>It&#39;s now running on my Facebook Fan Page Send it a message and get started!
+In this project, we are using Dexter, which is a platform people can create automated conversation. I will talk about data preparation, discussion, and challenge.
+The goal is to create a facebook fan page Chatbot in both Mandarin Chinese and English that help to manage fan page private message for Taiwanese Student Association (TSA).</description>
+    </item>
+    
+    <item>
+      <title>[2018]Topic Modeling</title>
+      <link>/project/topic-detection/</link>
+      <pubDate>Fri, 14 Dec 2018 21:10:20 -0600</pubDate>
+      
+      <guid>/project/topic-detection/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Project Title&lt;/strong&gt; :  Topic Modeling on Patient Review&lt;br /&gt;
+&lt;strong&gt;Skill&lt;/strong&gt;:  python, corpus&lt;br /&gt;
+&lt;strong&gt;Toolkit&lt;/strong&gt;: Gensim, NLTK&lt;br /&gt;
+&lt;strong&gt;Summary&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Built topic model on RateMD database by applying the Latent Dirichlet Allocation model from Gensim library.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Conducted and analyzed text cleaning procedures and lemmatization to find the optimal model&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Topic model is a type of statistical model for discovering the abstract &amp;quot;topics&amp;quot; in a collection of text documents.&lt;br /&gt;
+It is often used for discovery of hidden semantics structures in a text.&lt;/p&gt;
+
+&lt;p&gt;Latent Dirichlet Allocation (LDA) is an example of a topic model: a generative statistical model. It is used to classify text in a document to a particular topic.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[2018] Sentiment Analysis</title>
+      <link>/project/sentiment-analysis/</link>
+      <pubDate>Thu, 10 May 2018 21:10:45 -0600</pubDate>
+      
+      <guid>/project/sentiment-analysis/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Project Title&lt;/strong&gt; : Sentiment Analysis on Movie Review&lt;br /&gt;
+&lt;strong&gt;Skill&lt;/strong&gt;:  Weka, Python&lt;br /&gt;
+&lt;strong&gt;Toolkit&lt;/strong&gt;: nltk&lt;br /&gt;
+&lt;strong&gt;Summary&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Perform a series of sentiment classification comparison on Naïve Bayes Classifier, Random Forest, SVM, and Naïve Bayes Multinomial, with advanced features such as stemming, part of speech tagging, n-gram, and feature extractions&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Achieved higher performance with 85% accuracy for Naïve Bayes Multinomial using text preprocessing, Weka’s Ranker, N-gram, and InfoGainAttributeEval&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;With the increasing information on the internet, there are more unstructured data and more useful content that could be classified. This kind of task is called &lt;strong&gt;topic classification&lt;/strong&gt;. We identified a document’s topic, or even the languages it is written in. The other similar and important category of Natural Language Processing is &lt;strong&gt;sentiment classification&lt;/strong&gt;, or sentiment analysis.&lt;/p&gt;
+
+&lt;p&gt;Sentiment Analysis is an analysis to identify and categorize opinions of the public about things like movies, books, event, and etc, which usually determine whether one’s attitude towards a topic is positive, neutral, or negative. It is useful when we are looking for public opinion.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[2018]Text Classification: Language Identification</title>
+      <link>/project/language-identification/</link>
+      <pubDate>Fri, 02 Mar 2018 16:44:43 -0600</pubDate>
+      
+      <guid>/project/language-identification/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Project Title&lt;/strong&gt; : Language Identification on English, French, and Spanish&lt;br /&gt;
+&lt;strong&gt;Skill&lt;/strong&gt;:  python&lt;br /&gt;
+&lt;strong&gt;Toolkit&lt;/strong&gt;: nltk&lt;br /&gt;
+&lt;strong&gt;Summary&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;p&gt;• Implemented statistical letter and word-based n-gram models with smoothing for English, Italian, and Spanish&lt;br /&gt;
+• Achieved above 95% for both letter and word-based language models for test sets between 300 to 2000 sentences&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[2017]Spell Checker</title>
+      <link>/project/spell-checker/</link>
+      <pubDate>Mon, 27 Nov 2017 21:11:28 -0600</pubDate>
+      
+      <guid>/project/spell-checker/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Project Title&lt;/strong&gt; :  Spell Checker on Yupik Language&lt;br /&gt;
+&lt;strong&gt;Skill&lt;/strong&gt;:  python, greedy algorithm&lt;br /&gt;
+&lt;strong&gt;Summary&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;p&gt;• Normalized the text by tokenizing the consonant clusters using the greedy algorithm and nltk library&lt;br /&gt;
+• Utilized phonetics, phonology, and spelling rules of Yupik language to enforce spell checks&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

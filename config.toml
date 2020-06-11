@@ -1,0 +1,23 @@
+baseURL = ""
+languageCode = "en-us"
+themesDir = "themes"
+publishDir = "docs"
+title = "JoyyyJen"
+theme = "arabica"
+sectionPagesMenu = "mainmenu"
+googleAnalytics = "UA-113303558-2"
+
+[blackfriday]
+    smartypants = false
+    extensions = ["tables", "hardLineBreak", "fencedCode"]
+    smartDashes = false
+
+[params]
+    description = "四處瞧瞧，寫寫看看，就醉了"
+    dateFormatToUse = "2006-01-02"
+    linkedin = " "
+    github = " "
+    hasCJKLanguage = true
+    summarylength = 100
+
+

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="/img/dp.png" type="image/x-icon" />
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-113303558-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-113303558-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    
+    <title>
+      
+      [2018-19]Spin Intern: Speech-to-Text Auto-Captioning - JoyyyJen
+      
+    </title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Caveat|Lato:100,100i,300,300i,400,400i,700,700i|Source+Code+Pro:300,400,500,700" rel="stylesheet">
+    
+
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/bigfoot/dist/bigfoot.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/bigfoot/dist/bigfoot-number.css" />
+    <script type="text/javascript">
+        $.bigfoot();
+    </script>
+    
+    
+</head>
+
+    <body class="page-template">
+        <header class="main-header">
+	<div class="main-header-content">
+		<h1 class="blog-title">
+			<a href="/">
+				
+           JoyyyJen
+				
+			</a>
+		</h1>
+		<h2 class="blog-description">四處瞧瞧，寫寫看看，就醉了</h2>
+	</div>
+
+	<div class="nav">
+    
+		
+      <a class="nav- " role="presentation" href="/">Portfolio</a>
+		
+      <a class="nav- " role="presentation" href="/project/">Projects</a>
+		
+      <a class="nav- " role="presentation" href="/work/">Works</a>
+		
+		<a class="nav- " role="presentation" href="https://ajoy.me/">Blog</a>
+	</div>
+</header>
+
+        
+<main class="content" role="main">
+  <article class="post page">
+    <header class="post-header">
+      <h2 class="post-title">[2018-19]Spin Intern: Speech-to-Text Auto-Captioning</h2>
+    </header>
+    <section class="post-content">
+      <h3 id="job-description">Job Description</h3>
+
+<p><strong>Employer</strong> : National Center For Supercomputing Application<br />
+<strong>Project Title</strong> : Speech-To-Text Auto Captioning<br />
+<strong>Skill</strong>: python, bash, C++ <br><br />
+<strong>Toolkit</strong>: CMUSphinx<br />
+<strong>Summary</strong> :</p>
+
+<ul>
+<li>Researching frameworks and workflow for Automatic Speech Recognition (ASR) in order to facilitate live auto-captioning and create caption files<br /></li>
+<li>Developing an ASR application based on CMUSphinx Open Source Speech Recognition system<br /></li>
+<li>Building domain-specific speech and text corpus for phonetics dictionary and acoustics model<br /></li>
+<li>Comparing and evaluating the models' difference to get better training result<br />
+<br /></li>
+</ul>
+
+<p>CMUSphinx contains a number of packages for different tasks and applications.<br />
+Here is a list:</p>
+
+<ul>
+<li>Pocketsphinx — lightweight recognizer library written in C.<br /></li>
+<li>Sphinxbase — support library required by Pocketsphinx<br /></li>
+<li>Sphinx4 — adjustable, modifiable recognizer written in Java<br /></li>
+<li>Sphinxtrain — acoustic model training tools<br />
+<br /></li>
+</ul>
+
+<h3 id="1-speech-recognition">1. Speech Recognition</h3>
+
+<p>ASR matches utterances combinations using models. The utterance combination is the speech structure.</p>
+
+<p>Speech is a continuous audio stream</p>
+
+<ul>
+<li>A phone is any distinct speech sound/diphones, triphones …<br /></li>
+<li>Senone (detectors) is a  context-dependent unit / “spe” in speech → s_e<br /></li>
+<li>Include some context about neighboring phones when modeling a certain phone<br /></li>
+<li>p(a| c_n)?<br />
+<br /></li>
+</ul>
+
+<p>The three models in ASR are:</p>
+
+<ul>
+<li>Acoustic Model : acoustic properties for each senone (HMM)<br /></li>
+<li>Phonetic Dictionary: a mapping from words to phones<br /></li>
+<li>Language Model: to restrict word search<br /></li>
+<li>What is the next words in this example: In spite __<br />
+<br /></li>
+</ul>
+
+<h4 id="cmusphinx">CMUSphinx</h4>
+
+<p>Speech Recognition with CMUSphinx is straight forward. There are multiple versions for Pocketsphinx includes Go, Python, Android and etc.<br />
+The basic usage looks like the following:</p>
+
+<pre><code>from os import environ, path
+
+from pocketsphinx.pocketsphinx import *
+from sphinxbase.sphinxbase import *
+
+MODELDIR = &quot;pocketsphinx/model&quot;
+DATADIR = &quot;pocketsphinx/test/data&quot;
+
+# Create a decoder with certain model
+config = Decoder.default_config()
+config.set_string('-hmm', path.join(MODELDIR, 'en-us/en-us'))
+config.set_string('-lm', path.join(MODELDIR, 'en-us/en-us.lm.bin'))
+config.set_string('-dict', path.join(MODELDIR, 'en-us/cmudict-en-us.dict'))
+decoder = Decoder(config)
+
+# Decode streaming data.
+decoder = Decoder(config)
+decoder.start_utt()
+stream = open(path.join(DATADIR, 'goforward.raw'), 'rb')
+while True:
+  buf = stream.read(1024)
+  if buf:
+    decoder.process_raw(buf, False, False)
+  else:
+    break
+decoder.end_utt()
+print ('Best hypothesis segments: ', [seg.word for seg in decoder.seg()])
+
+</code></pre>
+
+<h3 id="2-evaluation">2. Evaluation</h3>
+
+<p>To evaluate the performance, we use Word Error Rate.</p>
+
+<p>Word Error Rate: ( I + D + S) / N<br />
+Given an original text, a recognition text with a length of N words,</p>
+
+<ul>
+<li>I is the number of inserted words<br /></li>
+<li>D is the number of deleted words<br /></li>
+<li>S is the number of substituted words<br />
+<br /></li>
+</ul>
+
+<p>I test the performance with:</p>
+
+<ul>
+<li>Input: 63 16kHz Audio Files<br /></li>
+<li>Output: recognition text<br /></li>
+<li>Models:<br />
+-- Acoustic Model: CMU en-us hmm<br />
+-- Language Model: en-us.lm.bin<br />
+-- Phonetics Dictionary: cmudict-en-us-dict<br /></li>
+<li>Word Error Rate: 31.9%<br />
+<br /></li>
+</ul>
+
+<h3 id="problem-how-to-improve">PROBLEM: How to improve?</h3>
+
+<p>My hypothesis to improve the recognition is by...<br />
+1. <a href="/project/asr-error-identification">Identify common errors</a><br />
+2. Build an domain-specific text and speech corpus</p>
+
+<p>Currently, I am working on followings to build the corpus:</p>
+
+<ul>
+<li><a href="https://joyyyjen.github.io/notebook-web/posts/creating-text-corpus-from-wiki/">Building a domain-specify dictionary</a><br /></li>
+<li><a href="https://joyyyjen.github.io/notebook-web/posts/adapting-acoustics-models-steps/">Adapting an existing acoustic model</a><br />
+<br /></li>
+</ul>
+
+<p>I am also keeping my model training result in a table here <a href="https://joyyyjen.github.io/notebook-web/posts/sr-training-chart/">Current Models Comparison </a></p>
+    </section>
+  </article>
+</main>
+
+        <footer class="site-footer">
+  <section class="icon"> <a class="icon2-github" href="https://github.com/joyyyjen"></a> <a class="icon2-linkedin" href="https://www.linkedin.com/in/joyjen/"></a></section>
+  <section class="copyright">&copy; 2019 JoyyyJen</section>
+  <section class="poweredby"><a href="http://thedarkroast.com/arabica">Arabica</a> theme by Sean Lunsford. Published with <a href="https://gohugo.io">Hugo</a>.</section>
+</footer>
+
+
+
+    </body>
+</html>

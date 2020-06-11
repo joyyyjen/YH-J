@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="/img/dp.png" type="image/x-icon" />
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-113303558-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-113303558-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    
+    <title>
+      
+      [2017]Spell Checker - JoyyyJen
+      
+    </title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Caveat|Lato:100,100i,300,300i,400,400i,700,700i|Source+Code+Pro:300,400,500,700" rel="stylesheet">
+    
+
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/bigfoot/dist/bigfoot.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/bigfoot/dist/bigfoot-number.css" />
+    <script type="text/javascript">
+        $.bigfoot();
+    </script>
+    
+    
+</head>
+
+    <body class="page-template">
+        <header class="main-header">
+	<div class="main-header-content">
+		<h1 class="blog-title">
+			<a href="/">
+				
+           JoyyyJen
+				
+			</a>
+		</h1>
+		<h2 class="blog-description">四處瞧瞧，寫寫看看，就醉了</h2>
+	</div>
+
+	<div class="nav">
+    
+		
+      <a class="nav- " role="presentation" href="/">Portfolio</a>
+		
+      <a class="nav- " role="presentation" href="/project/">Projects</a>
+		
+      <a class="nav- " role="presentation" href="/work/">Works</a>
+		
+		<a class="nav- " role="presentation" href="https://ajoy.me/">Blog</a>
+	</div>
+</header>
+
+        
+<main class="content" role="main">
+  <article class="post page">
+    <header class="post-header">
+      <h2 class="post-title">[2017]Spell Checker</h2>
+    </header>
+    <section class="post-content">
+      <p><strong>Project Title</strong> :  Spell Checker on Yupik Language<br />
+<strong>Skill</strong>:  python, greedy algorithm<br />
+<strong>Summary</strong> :</p>
+
+<p>• Normalized the text by tokenizing the consonant clusters using the greedy algorithm and nltk library<br />
+• Utilized phonetics, phonology, and spelling rules of Yupik language to enforce spell checks</p>
+
+<hr />
+
+<p>There are several approaches to do the spell check.<br />
+1. Compare with a correctly spelled words dictionary + morphological analysis on inflections<br />
+2. Create n-grams models to recognize errors statistically<br />
+3. Have phonetic and phonology information for the target language to identify patterns</p>
+
+<p>In this application, we are given the phonetics, phonology information, and spelling rules. Thus, this project is targeted at the #3 method.</p>
+
+<h3 id="phonetics-information">Phonetics information</h3>
+
+<p>For every language, they have consonants and vowels (alphabets).<br />
+A portion of Yupik's phonetics:</p>
+
+<ul>
+<li>consonant = {'p','t','k','kw','q','qw','f','ll','s','rr','gg','wh','ghh','ghhw','h','mm','nn','ngng','ngngw'}<br /></li>
+<li>nasal = {'m':'mm','n':'nn','ng':'ngng','ngw':'ngngw'}<br /></li>
+<li>fricative =  {'l':'ll','r':'rr','g':'gg','gh':'ghh','ghw':'ghhw'}<br />
+<br /></li>
+</ul>
+
+<p>This matters when we are doing tokenization.<br />
+A yupik words 'mayughwaaghmi' need to be separated into phonemes.<br />
+['m', 'a', 'y', 'u', 'ghw', 'a', 'a', 'gh', 'm', 'i']</p>
+
+<p>In English, 'phoneme' has 7 characters but its pronunciation 'fōnēm' has only 5 characters.</p>
+
+<h3 id="phonological-rule">Phonological Rule</h3>
+
+<pre><code># If an undoubled (but doubleable) nasal or fricative occurs immediately before the unvoiced fricative ll
+#     the grapheme for the doubleable voiced consonant is replaced with its voiceless counterpart.
+# If an undoubled (but doubleable) nasal occurs immediately after an unvoiced consonant
+#     (where that other consonant is not doubleable), 
+#     the grapheme for the doubleable voiced nasal is replaced with its voiceless counterpart.
+</code></pre>
+
+<p>In general, phonological rules start with the underlying representation of a sound (the phoneme that is stored in the speaker's mind) and yield the final surface form, or what the speaker actually pronounces.<br />
+We grab the surface form and convert it back to underlying representation in order to see the phonological rules.<br />
+Yupik have voicing assimilation when there are two adjacent consonants, if one of them is voiceless, the other becomes voiceless.</p>
+
+<pre><code>nasal = {'m':'mm','n':'nn','ng':'ngng','ngw':'ngngw'}
+
+if index+1 &lt; max  and graphemes[index+1] == &quot;ll&quot;:
+                graphemes[index] = nasal[graph]
+                index += 1
+elif index+1 &lt; max and graphemes[index+1] in C:
+                graphemes[index] = fricative[graph]
+                index += 1
+                #print(&quot;I replace something before unvoiced c&quot;)
+</code></pre>
+
+<p>I check the adjacent consonant by iterating through each graph in the graphene.<br />
+If it matches the rule, it is substituted with its corresponding voiceless graph.<br />
+After this process, we convert them to IPA.</p>
+
+<h3 id="spell-rules">Spell Rules</h3>
+
+<pre><code># Yupik syllables must be of the form:
+#
+# * CV
+# * CVC
+# * CVV
+# * CVVC
+#
+# Additionally, the first syllable of a word may be of the form:
+#
+# * V
+# * VC
+# * VV
+# * VVC
+
+if i == &quot;C&quot;:
+    if len(candi) == 1 and candi[-1] == &quot;C&quot;: return(word)
+    elif len(candi) == 1 and candi[-1] == &quot;V&quot;: candi = candi + i
+
+</code></pre>
+
+<p>After converted the IPA to 'C', and 'V', we check the spelling or syllable rules.<br />
+If the word violates the rules, it is an error.<br />
+From the code above, if there are double C in a syllable, it violates those rules.<br />
+If we have 'CV', then we continue to see what the next character is.</p>
+
+<p>Note: If the syllable candidate we have is 'CVCC', we could not just say it's an incorrect spelling. If the next letter is 'V', the syllable candidate will be split and still follows the syllable rules. This is where we need the greedy algorithm.</p>
+    </section>
+  </article>
+</main>
+
+        <footer class="site-footer">
+  <section class="icon"> <a class="icon2-github" href="https://github.com/joyyyjen"></a> <a class="icon2-linkedin" href="https://www.linkedin.com/in/joyjen/"></a></section>
+  <section class="copyright">&copy; 2019 JoyyyJen</section>
+  <section class="poweredby"><a href="http://thedarkroast.com/arabica">Arabica</a> theme by Sean Lunsford. Published with <a href="https://gohugo.io">Hugo</a>.</section>
+</footer>
+
+
+
+    </body>
+</html>

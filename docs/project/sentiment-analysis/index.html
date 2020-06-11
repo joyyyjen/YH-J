@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="/img/dp.png" type="image/x-icon" />
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-113303558-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-113303558-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    
+    <title>
+      
+      [2018] Sentiment Analysis - JoyyyJen
+      
+    </title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Caveat|Lato:100,100i,300,300i,400,400i,700,700i|Source+Code+Pro:300,400,500,700" rel="stylesheet">
+    
+
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/bigfoot/dist/bigfoot.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/bigfoot/dist/bigfoot-number.css" />
+    <script type="text/javascript">
+        $.bigfoot();
+    </script>
+    
+    
+</head>
+
+    <body class="page-template">
+        <header class="main-header">
+	<div class="main-header-content">
+		<h1 class="blog-title">
+			<a href="/">
+				
+           JoyyyJen
+				
+			</a>
+		</h1>
+		<h2 class="blog-description">四處瞧瞧，寫寫看看，就醉了</h2>
+	</div>
+
+	<div class="nav">
+    
+		
+      <a class="nav- " role="presentation" href="/">Portfolio</a>
+		
+      <a class="nav- " role="presentation" href="/project/">Projects</a>
+		
+      <a class="nav- " role="presentation" href="/work/">Works</a>
+		
+		<a class="nav- " role="presentation" href="https://ajoy.me/">Blog</a>
+	</div>
+</header>
+
+        
+<main class="content" role="main">
+  <article class="post page">
+    <header class="post-header">
+      <h2 class="post-title">[2018] Sentiment Analysis</h2>
+    </header>
+    <section class="post-content">
+      <p><strong>Project Title</strong> : Sentiment Analysis on Movie Review<br />
+<strong>Skill</strong>:  Weka, Python<br />
+<strong>Toolkit</strong>: nltk<br />
+<strong>Summary</strong> :</p>
+
+<ul>
+<li>Perform a series of sentiment classification comparison on Naïve Bayes Classifier, Random Forest, SVM, and Naïve Bayes Multinomial, with advanced features such as stemming, part of speech tagging, n-gram, and feature extractions<br /></li>
+<li>Achieved higher performance with 85% accuracy for Naïve Bayes Multinomial using text preprocessing, Weka’s Ranker, N-gram, and InfoGainAttributeEval<br />
+<br /></li>
+</ul>
+
+<hr />
+
+<p>With the increasing information on the internet, there are more unstructured data and more useful content that could be classified. This kind of task is called <strong>topic classification</strong>. We identified a document’s topic, or even the languages it is written in. The other similar and important category of Natural Language Processing is <strong>sentiment classification</strong>, or sentiment analysis.</p>
+
+<p>Sentiment Analysis is an analysis to identify and categorize opinions of the public about things like movies, books, event, and etc, which usually determine whether one’s attitude towards a topic is positive, neutral, or negative. It is useful when we are looking for public opinion.</p>
+
+<h4 id="weka">Weka</h4>
+
+<p><strong>Weka</strong> with its Graphical User Interference (GUI) allows users to do data mining and to learn machine learning <strong>without coding</strong>. It contains a collection of machine learning algorithms and tools for data preprocessing, classification, clustering, and etc.</p>
+
+<h4 id="dataset">Dataset</h4>
+
+<p>The movie review dataset consists of 1000 positive set and 1000 negative set. Each set contained user-created movies review from the IMDb archive of the rec.arts.movies.reviews newsgroup. Each review set is a plain text files (.txt) and saves in a corresponding class folder, “pos”, “neg”. This dataset is called polarity dataset v2.0.</p>
+
+<h4 id="pre-processing">Pre-processing</h4>
+
+<p>A series of text preprocessing is conducted before we load the text data into Weka.<br />
+&gt; Even if you are using other machine learning tools, it is still important to clean the text dataset.<br />
+It include <strong>punctuation removal</strong>, <strong>whitespace tokenization</strong>, and <strong>stop words removal</strong>.<br />
+Usually, characters like punctuations appear very frequently in a text document but useless in text classification.<br />
+For stop words like “after”, “the”, “a” are also useless in sentiment analysis</p>
+
+<h3 id="attribute-and-relation">Attribute and Relation</h3>
+
+<p>Weka provides an unsupervised attribute filter StringtoWordVector. It transfers the text data into <strong>bag-of-words</strong>, or in other words, this approach coverts a sequence of words to numerical feature vectors.<br />
+Each word is corresponding to a relation with 2 attributes: word, sentiment.<br />
+<img src="/weka.png" alt="img1" /></p>
+
+<h3 id="machine-learning-model">Machine Learning Model</h3>
+
+<p>After preprocessing, the dataset has 2000 instances and 1202 attributes/features. For the movie review sentiment analysis, I am testing four different machine learning models: <strong>Naive Bayes Classifier, Random Forest, SVM, and Naive Bayes Multinomial.</strong><br />
+This sentiment analysis is negative and positive classification. In another word, it’s a <strong>two class classification</strong>.</p>
+
+<h4 id="support-vector-machines-svm-https-en-wikipedia-org-wiki-support-vector-machine"><a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support Vector Machines (SVM)</a></h4>
+
+<ul>
+<li>find the boundary that separates classes.<br /></li>
+<li>In two-class SVM, it can be done by using a <strong>straight line</strong><br /></li>
+<li>suitable to make a prediction of two possible outcomes<br /></li>
+<li>good for large features set<br />
+<br /></li>
+</ul>
+
+<h4 id="decision-tree">Decision Tree</h4>
+
+<ul>
+<li>commonly used in classification problems<br /></li>
+<li>find the best features depends on the <strong>information gain</strong><br /></li>
+<li>easily <strong>overfit</strong> the training data<br /></li>
+<li>Random decision forests is a method that can correct decision trees’ tendency on overfitting<br /></li>
+<li>Random forests differ from the original way by <strong>selecting a random subset of the features</strong><br />
+<br /></li>
+</ul>
+
+<h4 id="naive-bayes-classifier">Naive Bayes classifier</h4>
+
+<ul>
+<li>A <strong>Naive Bayes model</strong> assumes that each of the features is <strong>conditionally independent</strong> of one another given some class<br /></li>
+<li>good when there are many equally important features<br /></li>
+<li><strong>Multinomial Naive Bayes</strong> considers the <strong>word count</strong> and the <strong>distribution is multinomial</strong><br />
+<br /></li>
+</ul>
+
+<h3 id="outcome1">Outcome1</h3>
+
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Accuracy</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>F-measure</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Naive Bayes</td>
+<td>0.8265</td>
+<td>0.827</td>
+<td>0.827</td>
+<td>0.826</td>
+</tr>
+
+<tr>
+<td>Naive Bayes Multinomial</td>
+<td>0.837</td>
+<td>0.837</td>
+<td>0.837</td>
+<td>0.837</td>
+</tr>
+
+<tr>
+<td>Random Forest</td>
+<td>0.795</td>
+<td>0.795</td>
+<td>0.795</td>
+<td>0.795</td>
+</tr>
+
+<tr>
+<td>SVM</td>
+<td>0.808</td>
+<td>0.808</td>
+<td>0.808</td>
+<td>0.808</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="advance-features">Advance features</h3>
+
+<p>To improve the baseline model, I would like to do stemming, part of speech tagging, and try bigram, and then feature extraction.</p>
+
+<h4 id="stemming-weka">Stemming - Weka</h4>
+
+<ul>
+<li>A process to approximated lemmatization of a word.<br />
+--  dog and dogs derive from the same lemma &quot;dog&quot;<br /></li>
+<li><strong>Approximated lemmatization</strong>: removing the suffix of the word<br />
+&gt; In Weka, as we are doing the bag-of-words approach with <em>StringToWordVector</em>, there is an option for <em>stemmer</em>.<br />
+<br /></li>
+</ul>
+
+<h4 id="n-gram-weka">N-gram - Weka</h4>
+
+<ul>
+<li>Multiple-words-phrase: “very good”, “good”, “not good at all”<br />
+-- Affect the positive and negative sentiments<br />
+&gt; N-grams can also be done in Weka. Under the filter of <em>StringToWordVector</em>, there is an option for <em>tokenizer</em>.<br />
+<br /></li>
+</ul>
+
+<h4 id="attributeselection-weka">AttributeSelection - Weka</h4>
+
+<ul>
+<li>not all of the attributes are important or useful<br />
+&gt; In this case, Weka has supervised attribute AttributeSelection filter. This filter allows us to choose an attribute evaluation method and a search strategy.<br />
+<br /></li>
+</ul>
+
+<p><strong>Option1</strong> : CfsSubsetEval works when the attribute subset is highly correlated with the class attribute while not strongly correlated with one another<br />
+<strong>Option2</strong>:  InfoGainAttributeEval + Ranker to manually choose the top ranked attributes.</p>
+
+<h4 id="part-of-speech-tagging-python-nltk-pos">Part of Speech Tagging - Python NLTK POS</h4>
+
+<ul>
+<li>can help differentiate words<br /></li>
+<li>“I love this movie”, and “It’s a love story” has different meanings<br />
+-- “I love this movie” can represent a positive opinion<br />
+-- “It’s a love story” is only a statement.<br />
+<br /></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Attribute Selection</th>
+<th>Model</th>
+<th>Naive Bayes Multinomial</th>
+<th>Random Forest</th>
+<th>SVM</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>InfoGain + Ranker(56)</td>
+<td>Accuracy</td>
+<td>0.8135</td>
+<td>0.7985</td>
+<td>0.8115</td>
+</tr>
+
+<tr>
+<td>InfoGain + Ranker(101)</td>
+<td>Accuracy</td>
+<td>0.84</td>
+<td>0.815</td>
+<td>0.8345</td>
+</tr>
+
+<tr>
+<td>InfoGain+ Ranker(151)</td>
+<td>Accuracy</td>
+<td><strong>0.8505</strong></td>
+<td>0.8275</td>
+<td>0.8385</td>
+</tr>
+
+<tr>
+<td>InfoGain+ Ranker(1111)</td>
+<td>Accuracy</td>
+<td>0.843</td>
+<td>0.8025</td>
+<td>0.8045</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>After a series of experiment, according to the result, the most beneficial features might be <strong>attribute selection and N-gram</strong>, and the most accurate model is Naive Bayes Multinominal.</p>
+    </section>
+  </article>
+</main>
+
+        <footer class="site-footer">
+  <section class="icon"> <a class="icon2-github" href="https://github.com/joyyyjen"></a> <a class="icon2-linkedin" href="https://www.linkedin.com/in/joyjen/"></a></section>
+  <section class="copyright">&copy; 2019 JoyyyJen</section>
+  <section class="poweredby"><a href="http://thedarkroast.com/arabica">Arabica</a> theme by Sean Lunsford. Published with <a href="https://gohugo.io">Hugo</a>.</section>
+</footer>
+
+
+
+    </body>
+</html>
