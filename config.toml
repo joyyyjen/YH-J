@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "https://joyyyjen.github.io/YH-J/"
 languageCode = "en-us"
 themesDir = "themes"
 publishDir = "docs"

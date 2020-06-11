@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Works on JoyyyJen</title>
-    <link>/work/</link>
+    <link>https://joyyyjen.github.io/YH-J/work/</link>
     <description>Recent content in Works on JoyyyJen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Mar 2019 21:09:03 -0600</lastBuildDate>
     
-	<atom:link href="/work/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://joyyyjen.github.io/YH-J/work/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[2018-19]Spin Intern: Speech-to-Text Auto-Captioning</title>
-      <link>/work/spin-intern/</link>
+      <link>https://joyyyjen.github.io/YH-J/work/spin-intern/</link>
       <pubDate>Fri, 01 Mar 2019 21:09:03 -0600</pubDate>
       
-      <guid>/work/spin-intern/</guid>
+      <guid>https://joyyyjen.github.io/YH-J/work/spin-intern/</guid>
       <description>&lt;h3 id=&#34;job-description&#34;&gt;Job Description&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Employer&lt;/strong&gt; : National Center For Supercomputing Application&lt;br /&gt;
@@ -36,10 +36,10 @@
     
     <item>
       <title>[2017]Glossika</title>
-      <link>/work/glossika/</link>
+      <link>https://joyyyjen.github.io/YH-J/work/glossika/</link>
       <pubDate>Thu, 10 Aug 2017 21:09:12 -0600</pubDate>
       
-      <guid>/work/glossika/</guid>
+      <guid>https://joyyyjen.github.io/YH-J/work/glossika/</guid>
       <description>&lt;h3 id=&#34;job-description&#34;&gt;Job Description&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Employer&lt;/strong&gt; : Glossika&lt;/p&gt;

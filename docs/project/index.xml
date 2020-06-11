@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on JoyyyJen</title>
-    <link>/project/</link>
+    <link>https://joyyyjen.github.io/YH-J/project/</link>
     <description>Recent content in Projects on JoyyyJen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Mar 2019 21:09:57 -0600</lastBuildDate>
     
-	<atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://joyyyjen.github.io/YH-J/project/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>[2018-19]Speech Recognition Error Identification</title>
-      <link>/project/asr-error-identification/</link>
+      <link>https://joyyyjen.github.io/YH-J/project/asr-error-identification/</link>
       <pubDate>Fri, 01 Mar 2019 21:09:57 -0600</pubDate>
       
-      <guid>/project/asr-error-identification/</guid>
+      <guid>https://joyyyjen.github.io/YH-J/project/asr-error-identification/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Project Title&lt;/strong&gt; : Speech-To-Text Error Analyzer&lt;br /&gt;
 &lt;strong&gt;Skill&lt;/strong&gt;: Python, Flask&lt;br /&gt;
 &lt;strong&gt;Toolkit&lt;/strong&gt;: CMUSphinx, nltk, numpy&lt;br /&gt;
@@ -31,10 +31,10 @@
     
     <item>
       <title>[2019]Chatbot</title>
-      <link>/project/chatbot/</link>
+      <link>https://joyyyjen.github.io/YH-J/project/chatbot/</link>
       <pubDate>Fri, 01 Mar 2019 21:09:30 -0600</pubDate>
       
-      <guid>/project/chatbot/</guid>
+      <guid>https://joyyyjen.github.io/YH-J/project/chatbot/</guid>
       <description>It&#39;s now running on my Facebook Fan Page Send it a message and get started!
 In this project, we are using Dexter, which is a platform people can create automated conversation. I will talk about data preparation, discussion, and challenge.
 The goal is to create a facebook fan page Chatbot in both Mandarin Chinese and English that help to manage fan page private message for Taiwanese Student Association (TSA).</description>
@@ -42,10 +42,10 @@ The goal is to create a facebook fan page Chatbot in both Mandarin Chinese and E
     
     <item>
       <title>[2018]Topic Modeling</title>
-      <link>/project/topic-detection/</link>
+      <link>https://joyyyjen.github.io/YH-J/project/topic-detection/</link>
       <pubDate>Fri, 14 Dec 2018 21:10:20 -0600</pubDate>
       
-      <guid>/project/topic-detection/</guid>
+      <guid>https://joyyyjen.github.io/YH-J/project/topic-detection/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Project Title&lt;/strong&gt; :  Topic Modeling on Patient Review&lt;br /&gt;
 &lt;strong&gt;Skill&lt;/strong&gt;:  python, corpus&lt;br /&gt;
 &lt;strong&gt;Toolkit&lt;/strong&gt;: Gensim, NLTK&lt;br /&gt;
@@ -67,10 +67,10 @@ It is often used for discovery of hidden semantics structures in a text.&lt;/p&g
     
     <item>
       <title>[2018] Sentiment Analysis</title>
-      <link>/project/sentiment-analysis/</link>
+      <link>https://joyyyjen.github.io/YH-J/project/sentiment-analysis/</link>
       <pubDate>Thu, 10 May 2018 21:10:45 -0600</pubDate>
       
-      <guid>/project/sentiment-analysis/</guid>
+      <guid>https://joyyyjen.github.io/YH-J/project/sentiment-analysis/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Project Title&lt;/strong&gt; : Sentiment Analysis on Movie Review&lt;br /&gt;
 &lt;strong&gt;Skill&lt;/strong&gt;:  Weka, Python&lt;br /&gt;
 &lt;strong&gt;Toolkit&lt;/strong&gt;: nltk&lt;br /&gt;
@@ -91,10 +91,10 @@ It is often used for discovery of hidden semantics structures in a text.&lt;/p&g
     
     <item>
       <title>[2018]Text Classification: Language Identification</title>
-      <link>/project/language-identification/</link>
+      <link>https://joyyyjen.github.io/YH-J/project/language-identification/</link>
       <pubDate>Fri, 02 Mar 2018 16:44:43 -0600</pubDate>
       
-      <guid>/project/language-identification/</guid>
+      <guid>https://joyyyjen.github.io/YH-J/project/language-identification/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Project Title&lt;/strong&gt; : Language Identification on English, French, and Spanish&lt;br /&gt;
 &lt;strong&gt;Skill&lt;/strong&gt;:  python&lt;br /&gt;
 &lt;strong&gt;Toolkit&lt;/strong&gt;: nltk&lt;br /&gt;
@@ -106,10 +106,10 @@ It is often used for discovery of hidden semantics structures in a text.&lt;/p&g
     
     <item>
       <title>[2017]Spell Checker</title>
-      <link>/project/spell-checker/</link>
+      <link>https://joyyyjen.github.io/YH-J/project/spell-checker/</link>
       <pubDate>Mon, 27 Nov 2017 21:11:28 -0600</pubDate>
       
-      <guid>/project/spell-checker/</guid>
+      <guid>https://joyyyjen.github.io/YH-J/project/spell-checker/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Project Title&lt;/strong&gt; :  Spell Checker on Yupik Language&lt;br /&gt;
 &lt;strong&gt;Skill&lt;/strong&gt;:  python, greedy algorithm&lt;br /&gt;
 &lt;strong&gt;Summary&lt;/strong&gt; :&lt;/p&gt;
